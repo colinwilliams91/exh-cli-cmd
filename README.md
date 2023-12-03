@@ -5,5 +5,5 @@
   - Hopefully you find this list of shortcuts helpful :)
 
 ## documentation
-- Markdig: rendering `markdown` to `html`
+- [Markdig](https://www.nuget.org/packages/Markdig/0.33.0#show-readme-container): rendering `markdown` to `html`
 - [ColorCode](https://github.com/wbaldoumas/markdown-colorcode): syntax highlighting
