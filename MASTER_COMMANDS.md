@@ -1,8 +1,8 @@
 ```ts
-will add all helpful commands and keep them documented
+these are keyboard shortcuts compiled from my learning experiences
 ```
 
-```ts
+```C#
 ctrl + f to search for cli term you are looking for
 ```
 # VSCODE
