@@ -98,7 +98,7 @@ kubernetes --> ingress controller --> for free let's encrypt (replace nginx & ce
 explorer.exe .
 ```
 ##### How to `echo` or `cat` write to a file with Bash:
-```bash
+```ts
 cat >> /path/to/existingFile.text<< EOF
 some text line 1
 some text line 2
@@ -106,7 +106,7 @@ some text line 3
 EOF
 ```
 switch `cat >>` to `cat >` to create a file instead of append
-```bash
+```ts
 cat > /path/to/newFile.text<< EOF
 some text line 1
 some text line 2
@@ -278,7 +278,7 @@ read
 ### Debugging in Bash
 
 `set -x` _at the top of a script enables debugging (printing executed commands to the terminal)_
-```bash
+```ts
 #!/bin/bash
 
 set -x
@@ -288,7 +288,7 @@ set -x
 
 ### CRON
 **For Ubuntu/Debian, you can find `cron`logs at:**
-```bash
+```ts
 /var/log/syslog
 ```
 
@@ -303,17 +303,17 @@ Client Secret: {{google_client_secret}}
 
 # Misc.
 
-```bash
+```ts
 grep nri // <-- 
 ```
 
 ##### `To get a list of all listening TCP ports using lsof`
-```bash
+```ts
 sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
 
 ##### `using ss tool (formerly netstat) to list all open ports`
-```bash
+```ts
 ss -tulpn
 ```
 
