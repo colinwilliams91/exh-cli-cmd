@@ -271,7 +271,7 @@ kill -9 PROCESS_ID
 ### Read (capture user INPUT)
 
 `capture user input`
-```sh
+```ts
 read
 ```
 
