@@ -2,6 +2,9 @@
 will add all helpful commands and keep them documented
 ```
 
+```ts
+ctrl + f to search for cli term you are looking for
+```
 # VSCODE
 `open file "side by side" (in new panel)`
 ```ts
@@ -24,7 +27,7 @@ ctrl + `
 ```
 
 `focus source control view`
-```sh
+```ts
 ctrl + shift + g
 ```
 ##### `inside terminal to do "reverse lookup history" (commands entered)`
@@ -38,44 +41,44 @@ fn + f12
 ```
 
 `goto/go to references`
-```sh
+```ts
 shift + fn + f12
 ```
 
 `select current line`
-```sh
+```ts
 ctrl + l
 ```
 
 `open markdown preview`
-```sh
+```ts
 ctrl + shift + v
 ```
 
 `Side by side Markdown edit and preview`
-```sh
+```ts
 ctrl + k, v # ctrl + k, then release, press v
 ```
 
 `change coding language` (inside text editor)
-```sh
+```ts
 ctrl + k, m # release ctrl + k, then press m
 ```
 
 `navigate history (tabs?)`
-```sh
+```ts
 ctrl + tab
 alt + left # navigate back
 alt + right # navigate forward
 ```
 
 `navigate to specific line`
-```sh
+```ts
 ctrl + g
 ```
 
 `add additional cursors to all occurrences`
-```sh
+```ts
 ctrl + shift + l
 ```
 
@@ -91,7 +94,7 @@ kubernetes --> ingress controller --> for free let's encrypt (replace nginx & ce
 
 **EXPLORER WINDOWS FILE SYSTEM**
 `open windows file explorer GUI for WSL`
-```sh
+```ts
 explorer.exe .
 ```
 ##### How to `echo` or `cat` write to a file with Bash:
@@ -114,75 +117,75 @@ EOF
 `(( expression ))` <-- this will execute/perform an expression
 
 `print BASH env`
-```sh
+```ts
 printenv
 ```
 
 `echo variables` (example how to access vars in BASH)
-```sh
+```ts
 echo $LANG # <-- LANG env var (bash)
 ```
 
 `$RANDOM in BASH will create a random number`
-```sh
+```ts
 echo $RANDOM # <-- 22024 : between 0 and 32767
 ```
 
-```sh
+```ts
 I=0 # <-- passing this in the terminal will persist a var
 (( I++ )) # <-- I will now become 1 and persist
 # we don't need to prepend $ for vars in (( expression ))
 ```
 
 `this will print expressions for (( expression )) operations`
-```sh
+```ts
 help let
 ```
 ##### `View file "long" with permissions list`
-```sh
+```ts
 ls -l
 ```
 
 `-rw-r--r--` in front of the file indicates the permissions: **`r` = read, `w` = write, `x` = execute**
 **output:** `-rwxr-xr-x` <-- see **`x`** by 3 different "users" (all users can execute now)
 ##### `Give executable permissions to a file`
-```sh
+```ts
 chmod +x filename.whatever
 ```
 
 `man` command is "manual" (like `help`)
-```sh
+```ts
 man bash # <-- prints manual for bash
 man sleep # <-- prints manual for sleep (binary)
 ```
 
 **`-e` flag needed for special characters**
-```sh
+```ts
 echo -e "\n~~ Countdown Timer ~~\n"
 ```
 
 `lists root of the file system`
-```sh
+```ts
 ls /
 ```
 _ls /bin will list all binaries on the file system. Bash lives here: #!/bin/bash which will use bash commands. we can access other binaries or libraries here_
 
 
 `lists bash commands`
-```sh
+```ts
 help
 ```
 
 `things we can pass to the bash TEST command (for testing true/false (for ifs or [[ EXPRESSIONS ]]))
-```sh
+```ts
 help test
 ```
 
-```sh
+```ts
 ( expression ) # <-- evaluates expression/returns value
 ```
 
-```sh
+```ts
 help [[ expression ]] # <-- output below
 ```
 
@@ -204,12 +207,12 @@ help [[ expression ]] # <-- output below
     false or an invalid argument is given.
 
 **`we can evaluate any expression in the BASH terminal or .sh script:`**
-```sh
+```ts
 [[ 4 -le 5 ]] # <-- `-le` === less-than-or-equal
 ```
 
 `echo $?`
-```sh
+```ts
 echo $? # <-- prints last bash command's EXIT STATUS
 0 # <-- 0 === true (0 === no errors)
 
@@ -218,7 +221,7 @@ echo $?
 1 # <-- 1 === false (> 0 === contains errors | "false")
 ```
 
-```sh
+```ts
 [[ 4 -ge 5 ]]; echo $? # <-- run multiple comands on single line with `;`
 1 # <-- output
 ```
@@ -227,19 +230,19 @@ echo $?
 
 `check if a file exists (and output EXIT STATUS)` **`-a | -e`**
 _THIS WILL CHECK THE FOLDER FROM WHERE THE COMMAND WAS ENTERED_
-```sh
+```ts
 [[ -a countdown.sh  ]]; echo $?
 0 # <-- output 0 if file exists
 ```
 
 `to list all variables in BASH`
-```sh
+```ts
 declare -p
 ```
 
 
 `all variables: @ | *`
-```sh
+```
 ARR=("a" "b" "c")
 echo ${ARR[@]}
 
@@ -292,7 +295,7 @@ set -x
 # Postman
 
 `variables created/stored in "Environments" in postman can be passed into fields using {{}}`
-```sh
+```ts
 Client ID: {{google_client_id}}
 Client Secret: {{google_client_secret}}
 ```
@@ -318,45 +321,45 @@ ss -tulpn
 
 `tree [OPTIONS] [directory]` ("`.`" might not be necessary)
 `List folder structure only directories from current directory`
-```sh
+```ts
 tree -d .
 ```
 
 `List folder structure only directors at depth 1`
-```sh
+```ts
 tree -d -L 1 .
 ```
 
 `List folder structure and all hidden files`
-```sh
+```ts
 tree -a .
 ```
 
 # Ubuntu
 `check Ubuntu version`
-```sh
+```ts
 lsb_release -a
 ```
 
 `search for software to install` `<application>`
-```sh
+```ts
 sudo apt search <audacity>
 ```
 
 `install from cli`
-```sh
+```ts
 sudo apt install audacity
 ```
 
 `killall <-- terminates process`
-```sh
+```ts
 killall <snap-store>
 ```
 
 # Oh My ZSH!
 
 `runs zsh powerlvl10k setup (prompt styling)`
-```sh
+```ts
 p10k configure
 ```
 
@@ -442,23 +445,23 @@ should see this:
 # Visual Studio
 
 `run application`
-```sh
+```ts
 ctrl + fn + f5 # <<-- default run
 fn + f5 # <<-- debug run (slower)
 ```
 
 `open terminal (View.Terminal) shortcut added`
-```sh
+```ts
 ctrl + shift + t
 ```
 
 `quick launch`
-```sh
+```ts
 ctrl + q # search commands keywords e.g: "new"
 ```
 
 `multiline comment`
-```sh
+```ts
 shift + alt + a # multi line /* */
 
 ctrl + k, ctrl + / # single line (can be multi) //
@@ -487,7 +490,7 @@ alt + 2 // <<-- shows where used
 ```
 ### Create
 `create a new file in project`
-```sh
+```ts
 shift + fn + f2 # with Add New File extension
 ---
 ctrl + shift + a
@@ -506,19 +509,19 @@ ctrl + shift + j, i // release then press i
 ```
 
 `format`
-```sh
+```ts
 ctrl + k, ctrl + d # formats entire DOCUMENT (d = doc)
 ctrl + k, ctrl + f # formats selection (f = format)
 ```
 ### Navigate
 
 `focus text editor`
-```sh
+```ts
 esc # literally, just hit escape once...
 ```
 
 `navigate tabs | close tabs`
-```sh
+```ts
 ctrl + tab # next tab
 ctrl + shift + tab # prev tab
 ctrl + fn + f4 # close active tab
@@ -526,19 +529,19 @@ alt + w + l # close all tabs
 ```
 
 `navigate to solution explorer`
-```sh
+```ts
 ctrl + alt + l # ctrl + tab navigate tabs here too
 ctrl + ; # to solution explorer w/ search bar
 ```
 
 `go to line start`
-```sh
+```ts
 fn + k # k === "home"
 ctrl + / + leftArrow # Edit.LineStart
 ```
 
 `go to line end`
-```sh
+```ts
 fn + , # , === "end"
 ctrl + / + rightArrow # Edit.LineEnd
 ```
@@ -549,7 +552,7 @@ ctrl + click // highlighted class
 ```
 
 `Go To`
-```sh
+```ts
 ctrl + g # go to line
 fn + f12 # go to definition
 ctrl + fn + f12 # go to declaration
@@ -557,55 +560,55 @@ ctrl + d # go to next (highlighted selection)
 ```
 
 `Go To All` (NICE)
-```sh
+```ts
 ctrl + t # backspace to clear out "symbol"
 ```
 
 `find closing brace`
-```sh
+```ts
 ctrl + ]
 ```
 
 `add cursor above/below`
-```sh
+```ts
 ctrl + alt + upArrow
 ctrl + alt + downArrow
 ```
 
 `collapse/expand code blocks`
-```sh
+```ts
 ctrl + m, ctrl + m
 ```
 
 `replace`
-```sh
+```ts
 ctrl + h
 ```
 
 `delete to...`
-```sh
+```ts
 ctrl + delete # delete to start of word
 ctrl + backspace # delete to end of word
 ```
 
 `save all`
-```sh
+```ts
 ctrl + shift + s
 ```
 
 `view in browser`
-```sh
+```ts
 ctrl + shift + w
 ```
 
 `bookmark` (_a keyboard chord is multiple shortcuts in a row_)
-```sh
+```ts
 ctrl + k, ctrl + k
 ```
 - `View >> Bookmark Window` to view all Bookmarks
 
 `next split pane`
-```sh
+```ts
 fn + f6
 ```
 
@@ -615,27 +618,27 @@ ctrl + m, ctrl + m
 ```
 ### Debugger:
 `add breakpoint (highlight line first)`
-```sh
+```ts
 fn + f9 # <<-- press again to remove
 ```
 `continue to next breakpoint (inside debugger)`
-```sh
+```ts
 fn + fn5
 ```
 `step over (inside debugger)`
-```sh
+```ts
 fn + f10
 ```
 `step into method (inside debugger)`
-```sh
+```ts
 fn + f11
 ```
 `step out of method (if accidentally stepped in)`
-```sh
+```ts
 shift + fn + fn11
 ```
 `exit debugger`
-```sh
+```ts
 ctrl + shift + fn + f5
 ```
 ---
@@ -646,7 +649,7 @@ ctrl + h
 ```
 
 `rename all properties`
-```sh
+```ts
 ctrl + r, ctrl + r
 ```
 
@@ -661,7 +664,7 @@ ctrl + d
 ```
 
 `alternate copyLinesDown option`
-```sh
+```ts
 # without any selection 
 ctrl + e
 ctrl + v
@@ -674,12 +677,12 @@ httpenv.json.user
 ```
 
 `auto fix suggestions`
-```sh
+```ts
 alt + enter 
 ```
 
 `compile/build application` show error/warning outputs
-```sh
+```ts
 ctrl + shift + b
 ```
 
@@ -690,7 +693,7 @@ ctrl + r, ctrl + m
 ```
 
 #### Object Browser
-```sh
+```ts
 ctrl + alt + j
 ```
 - `ctrl + click` on `var` or `type identifier` to open object definition, which will show all attributes and methods on datatype "constructor" parent object ("`struct`" in C#) (available methods)
@@ -698,82 +701,49 @@ ctrl + alt + j
 #### CODE SNIPPETS (inside VS)
 - enter these aliases inside your IDE text editor
 `Console.WriteLine()`
-```sh
+```ts
 cw # press tab twice
 ```
 `public CodeSnippetExamples() { }` "Constructor"
-```sh
+```ts
 ctor # press tab twice
 ```
 `public string LastName { get; set; }` "Property"
-```sh
+```ts
 prop # press tab twice
 propfull # <-- creates FULL prop w/ getter & setter
 ```
 `try { } catch (Exception) { throw; }` try/catch block
-```sh
+```ts
 try # press tab twice
 tryf # try/finally block
 ```
 - instantiate the Exception inside `catch (... ex)`
 `for loop`
-```sh
+```ts
 for # press tab twice
 forr # for loop decrement
 ```
 `foreach loop` including collection
-```sh
+```ts
 var names = new List<string>();
 foreach # press tab twice
 ```
 - will output: `foreach (var name in names) { }`
 `while loop`
-```sh
+```ts
 while # press tab twice
 ```
 `do { } while (true);`
-```sh
+```ts
 do # press tab twice
 ```
 
 `populate snippets from context menu`
-```sh
+```ts
 ctrl + k, ctrl + x
 # for example, surround With or e.g. Wrap {} w/ braces
 ```
 
 ---
-10/4 VISUAL STUDIO GET FILE ICONS AND ADD NEW FILE extensions
 
-.bash_history
-.azure
-.aws
-sizeStorer.wt
-
-https://askubuntu.com/questions/1403508/access-a-web-application-running-in-ubuntu-wsl-from-another-pc-on-the-network/1403545#1403545
-
----
-
-NordVPN
-- "+add" dedicated IP at checkout
-- get subscription on Linux Machine
-- get app on Linux Machine
-- connect to VPN dedicated/static IP
-	- if not by default. in app:
-		- Settings > Connection > choose different protocol
-- This will always log my in on paylocity on my dedicated IP address through nordVPN (Buffalo, Los Angeles, Dallas, New York, Chicago, Seattle, Miami) (pick one)
-
-
-send to jen
-
-https://www.youtube.com/watch?v=rCLnwnEEJT8
-
-https://www.youtube.com/watch?v=dXGQDbVxnGs&t=3s
-
-
-    // TODO: 0. Find Unity Visual Studio Intellisense...
-    // TODO: 1. Set the appropriate animation when jumping
-    // TODO: 2. How could we apply easing when jumping?
-    // TODO: 3. Apply gravity
-    // TODO: 4. Remove infinte jump (maxJumpDuration time solve)
-    // TODO: 5. Fix bullshit... (get horizontal movement to fucking work again?)
