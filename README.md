@@ -304,7 +304,7 @@ set -x
 
 # Postman
 
-`variables created/stored in "Environments" in postman can be passed into fields using {{}}`
+`variables created/stored in "Environments" in postman can be passed into fields using double curlys`
 ```sh
 Client ID: {{google_client_id}}
 Client Secret: {{google_client_secret}}
