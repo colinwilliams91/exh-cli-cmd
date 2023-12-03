@@ -36,7 +36,7 @@ ctrl + r
 ```
 
 `goto/go to definition`
-```
+```ts
 fn + f12
 ```
 
@@ -242,7 +242,7 @@ declare -p
 
 
 `all variables: @ | *`
-```
+```ts
 ARR=("a" "b" "c")
 echo ${ARR[@]}
 
@@ -255,17 +255,17 @@ declare -p ARR
 ### Node
 
 `find all running node processes`
-```
+```ts
 ps -ef | grep node
 ```
 
 `find node process by port`
-```
+```ts
 lsof -i :3000
 ```
 
 `kill process`
-```
+```ts
 kill -9 PROCESS_ID 
 ```
 ### Read (capture user INPUT)
@@ -644,7 +644,7 @@ ctrl + shift + fn + f5
 ---
 
 `replace (find and replace)`
-```
+```ts
 ctrl + h
 ```
 
@@ -654,12 +654,12 @@ ctrl + r, ctrl + r
 ```
 
 `solution explorer (folder explorer)`
-```
+```ts
 ctrl + alt + l
 ```
 
 `copyLinesDown (without VSCode extra mappings`
-```
+```ts
 ctrl + d
 ```
 
@@ -672,7 +672,7 @@ alt + up/down # <<-- to move
 ```
 
 `extensions with .user will not get checked-in`
-```
+```ts
 httpenv.json.user
 ```
 
