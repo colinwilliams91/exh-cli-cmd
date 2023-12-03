@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Markdown.ColorCode;
 using Markdig;
 
 namespace exh_cli_cmd.Pages
@@ -15,8 +16,14 @@ namespace exh_cli_cmd.Pages
 
         public void OnGet()
         {
-            string markdownContext = System.IO.File.ReadAllText("../MASTER_COMMANDS.md");
-            this.RenderedMarkdown = Markdown.ToHtml(markdownContext);
+            string markdownContext = System.IO.File.ReadAllText("./MASTER_COMMANDS.md");
+
+            var pipeline = new MarkdownPipelineBuilder()
+                .UseAdvancedExtensions()
+                .UseColorCode()
+                .Build();
+
+            this.RenderedMarkdown = Markdig.Markdown.ToHtml(markdownContext, pipeline);
         }
     }
 }
